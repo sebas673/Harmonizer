@@ -246,8 +246,8 @@ public class Harmonizer {
         int rootDeg = pitchToDegree(root, tonic);
         int[] chord = new int[3];
         int voice1Octave = 72;
-        int voice2Ocatve = 60;
-        int voice3Ocatve = 48;
+        int voice2Octave = 60;
+        int voice3Octave = 48;
         chord[0] = root;
         chord[1] = root + majScale[scaleDegree[rootDeg] + 1] + majScale[scaleDegree[rootDeg] + 2];
         chord[2] = root + majScale[scaleDegree[rootDeg] + 1] + majScale[scaleDegree[rootDeg] + 2]
@@ -255,8 +255,8 @@ public class Harmonizer {
 
         int[] centeredChord = centerChord(chord);
         centeredChord[0] += voice1Octave;
-        centeredChord[1] += voice2Ocatve;
-        centeredChord[2] += voice3Ocatve;
+        centeredChord[1] += voice2Octave;
+        centeredChord[2] += voice3Octave;
         return centeredChord;
     }
 
