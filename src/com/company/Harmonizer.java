@@ -114,7 +114,8 @@ public class Harmonizer {
             if (notes[i] < 0)
                 continue;
 
-            int melDeg = pitchToDegree(notes[i], tonic);                                                                  // buggy?
+            // does not harmonize if note is an accidental
+            int melDeg = pitchToDegree(notes[i], tonic);
             System.out.println("mel deg: " + melDeg);
             if (melDeg != 0 && melDeg != 2 && melDeg != 4 && melDeg != 5 && melDeg != 7 && melDeg != 9 && melDeg != 11) {
                 System.out.println("continue:");
