@@ -114,12 +114,12 @@ public class Harmonizer {
             if (notes[i] < 0)
                 continue;
 
-//            int melDeg = pitchToDegree(notes[i], tonic);                                                                  // buggy?
-//            System.out.println("mel deg: " + melDeg);
-//            if (melDeg != 0 && melDeg != 2 && melDeg != 4 && melDeg != 5 && melDeg != 7 && melDeg != 9 && melDeg != 11) {
-//                System.out.println("continue:");
-//                continue;
-//            }
+            int melDeg = pitchToDegree(notes[i], tonic);                                                                  // buggy?
+            System.out.println("mel deg: " + melDeg);
+            if (melDeg != 0 && melDeg != 2 && melDeg != 4 && melDeg != 5 && melDeg != 7 && melDeg != 9 && melDeg != 11) {
+                System.out.println("continue:");
+                continue;
+            }
 
             // adds chord on beat 1
             if (!hasBeat1 && counter - rhythm[i] == 0.0) {
