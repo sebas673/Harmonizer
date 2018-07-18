@@ -6,7 +6,9 @@ import jm.util.Write;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 import static jm.constants.ProgramChanges.*;
 
@@ -26,6 +28,7 @@ public class HForm {
     private JList list1;
     private JList list2;
     private JButton makeMinorButton;
+    private JComboBox lastClickedCBox;
 
     // private JPopupMenu popup;
     private int voice0;
@@ -33,14 +36,8 @@ public class HForm {
     private int voice2;
     private int voice3;
 
-    public HForm() {
-
-        voice0 = 0;
-        voice1 = 0;
-        voice2 = 0;
-        voice3 = 0;
-
-        HashMap<String, Integer> instruments = new HashMap<>();
+    private HashMap<String, Integer> instruments = new HashMap<>();
+    {
         instruments.put("ACOUSTIC BASS", ACOUSTIC_BASS);
         instruments.put("ALTO SAXOPHONE", ALTO_SAXOPHONE);
         instruments.put("BANJO", BANJO);
@@ -73,6 +70,35 @@ public class HForm {
         instruments.put("VIOLA", VIOLA);
         instruments.put("VIOLIN", VIOLIN);
         instruments.put("XYLOPHONE", XYLOPHONE);
+    }
+
+    private HashSet<Integer> twoPartInstruments = new HashSet<>();
+
+    {
+        twoPartInstruments.add(ELECTRIC_PIANO);
+        twoPartInstruments.add(HARP);
+        twoPartInstruments.add(MARIMBA);
+        twoPartInstruments.add(PIANO);
+        twoPartInstruments.add(XYLOPHONE);
+    }
+
+    private HashMap<JComboBox,JComboBox> comboBoxNeighbors = new HashMap<>();
+
+    {
+        comboBoxNeighbors.put(comboBox0, comboBox1);
+        comboBoxNeighbors.put(comboBox1, comboBox2);
+        comboBoxNeighbors.put(comboBox2, comboBox3);
+        comboBoxNeighbors.put(comboBox3, comboBox3);
+    }
+
+    public HForm() {
+
+        voice0 = 0;
+        voice1 = 0;
+        voice2 = 0;
+        voice3 = 0;
+
+
 
 
 
@@ -136,49 +162,9 @@ public class HForm {
 
 
 
-        comboBox0.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                // JOptionPane.showMessageDialog(null, "the selected item changed");
-                String instrument0 = (String) comboBox0.getSelectedItem();
-                // JOptionPane.showMessageDialog(null, instrument0 + " SELECTED");
-                voice0 = instruments.get(instrument0);
-                // JOptionPane.showMessageDialog(null, "int version = " + voice0);
-            }
-        });
 
-        comboBox1.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-               // JOptionPane.showMessageDialog(null, "the selected item changed");
-                String instrument1 = (String) comboBox1.getSelectedItem();
-                // JOptionPane.showMessageDialog(null, instrument1 + " SELECTED");
-                voice1 = instruments.get(instrument1);
-                // JOptionPane.showMessageDialog(null, "int version = " + voice1);
-            }
-        });
 
-        comboBox2.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                // JOptionPane.showMessageDialog(null, "the selected item changed");
-                String instrument2 = (String) comboBox2.getSelectedItem();
-                // JOptionPane.showMessageDialog(null, instrument2 + " SELECTED");
-                voice2 = instruments.get(instrument2);
-                // JOptionPane.showMessageDialog(null, "int version = " + voice2);
-            }
-        });
 
-        comboBox3.addItemListener(new ItemListener() {
-            @Override
-            public void itemStateChanged(ItemEvent e) {
-                // JOptionPane.showMessageDialog(null, "the selected item changed");
-                String instrument3 = (String) comboBox3.getSelectedItem();
-                // JOptionPane.showMessageDialog(null, instrument3 + " SELECTED");
-                voice3 = instruments.get(instrument3);
-                // JOptionPane.showMessageDialog(null, "int version = " + voice3);
-            }
-        });
 
         makeMinorButton.addActionListener(new ActionListener() {
             @Override
@@ -190,8 +176,66 @@ public class HForm {
                 Write.midi(newScore);
             }
         });
+
+
+
+
+
+
+        comboBox0.addMouseListener(new myMouseListener());
+        comboBox1.addMouseListener(new myMouseListener());
+        comboBox2.addMouseListener(new myMouseListener());
+        comboBox3.addMouseListener(new myMouseListener());
+        comboBox0.addItemListener(new myItemListener());
+        comboBox1.addItemListener(new myItemListener());
+        comboBox2.addItemListener(new myItemListener());
+        comboBox3.addItemListener(new myItemListener());
+
+
+
+        comboBox0.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+
+            }
+        });
     }
 
+    class myItemListener implements ItemListener {
+        public myItemListener() {
+
+        }
+
+        @Override
+        public void itemStateChanged(ItemEvent e) {
+            JComboBox source = (JComboBox) e.getSource();
+            if (lastClickedCBox == source) {
+                Object instrument = source.getSelectedItem();
+                String stringInstrument = (String) instrument;
+
+                int voice = instruments.get(stringInstrument);
+
+                if (twoPartInstruments.contains(voice)) {
+
+                    (comboBoxNeighbors.get(source)).setSelectedItem(instrument);
+                }
+            }
+        }
+    }
+
+
+
+    class myMouseListener extends MouseAdapter {
+
+        public myMouseListener() {
+
+        }
+
+        public void mouseClicked(MouseEvent e) {
+            super.mouseClicked(e);
+            lastClickedCBox = (JComboBox) e.getSource();
+        }
+    }
 
 
 

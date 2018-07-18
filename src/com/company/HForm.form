@@ -107,16 +107,11 @@
               <background color="-256"/>
               <foreground color="-16777216"/>
               <model>
-                <item value="SELECT MELODY INSTRUMENT"/>
-                <item value="ACOUSTIC BASS"/>
+                <item value="PIANO"/>
                 <item value="ALTO SAXOPHONE"/>
                 <item value="BANJO"/>
-                <item value="BARI SAXOPHONE"/>
-                <item value="BASSOON"/>
                 <item value="BELLS"/>
-                <item value="CELLO"/>
                 <item value="CLARINET"/>
-                <item value="ELECTRIC BASS"/>
                 <item value="ELECTRIC GUITAR"/>
                 <item value="ELECTRIC PIANO"/>
                 <item value="FLUTE"/>
@@ -126,21 +121,14 @@
                 <item value="MARIMBA"/>
                 <item value="OBOE"/>
                 <item value="ORGAN"/>
-                <item value="PIANO"/>
                 <item value="PICCOLO"/>
                 <item value="SOPRANO SAXOPHONE"/>
                 <item value="STEEL DRUM"/>
-                <item value="SYNTH BASS"/>
-                <item value="TENOR SAXOPHONE"/>
-                <item value="TIMPANI"/>
-                <item value="TROMBONE"/>
                 <item value="TRUMPET"/>
-                <item value="TUBA"/>
-                <item value="VIOLA"/>
                 <item value="VIOLIN"/>
                 <item value="XYLOPHONE"/>
               </model>
-              <toolTipText value="Click here to open instrument popup menu."/>
+              <toolTipText value="Click to select melody instrument."/>
             </properties>
           </component>
           <component id="e62a" class="javax.swing.JComboBox" binding="comboBox3">
@@ -151,40 +139,21 @@
               <background color="-65316"/>
               <foreground color="-16777216"/>
               <model>
-                <item value="SELECT CHORD INSTRUMENT 3"/>
+                <item value="PIANO"/>
                 <item value="ACOUSTIC BASS"/>
-                <item value="ALTO SAXOPHONE"/>
-                <item value="BANJO"/>
                 <item value="BARI SAXOPHONE"/>
-                <item value="BASSOON"/>
-                <item value="BELLS"/>
-                <item value="CELLO"/>
-                <item value="CLARINET"/>
                 <item value="ELECTRIC BASS"/>
-                <item value="ELECTRIC GUITAR"/>
                 <item value="ELECTRIC PIANO"/>
-                <item value="FLUTE"/>
-                <item value="FRENCH HORN"/>
-                <item value="GUITAR"/>
                 <item value="HARP"/>
                 <item value="MARIMBA"/>
-                <item value="OBOE"/>
                 <item value="ORGAN"/>
-                <item value="PIANO"/>
-                <item value="PICCOLO"/>
-                <item value="SOPRANO SAXOPHONE"/>
                 <item value="STEEL DRUM"/>
                 <item value="SYNTH BASS"/>
-                <item value="TENOR SAXOPHONE"/>
                 <item value="TIMPANI"/>
-                <item value="TROMBONE"/>
-                <item value="TRUMPET"/>
                 <item value="TUBA"/>
-                <item value="VIOLA"/>
-                <item value="VIOLIN"/>
                 <item value="XYLOPHONE"/>
               </model>
-              <toolTipText value="Click here to open instrument popup menu."/>
+              <toolTipText value="Click to select bottom chord instrument."/>
             </properties>
           </component>
           <component id="bf941" class="javax.swing.JComboBox" binding="comboBox1">
@@ -195,40 +164,29 @@
               <background color="-31488"/>
               <foreground color="-16777216"/>
               <model>
-                <item value="SELECT CHORD INSTRUMENT 1"/>
-                <item value="ACOUSTIC BASS"/>
+                <item value="PIANO"/>
                 <item value="ALTO SAXOPHONE"/>
                 <item value="BANJO"/>
-                <item value="BARI SAXOPHONE"/>
-                <item value="BASSOON"/>
                 <item value="BELLS"/>
                 <item value="CELLO"/>
                 <item value="CLARINET"/>
-                <item value="ELECTRIC BASS"/>
                 <item value="ELECTRIC GUITAR"/>
                 <item value="ELECTRIC PIANO"/>
-                <item value="FLUTE"/>
                 <item value="FRENCH HORN"/>
                 <item value="GUITAR"/>
                 <item value="HARP"/>
                 <item value="MARIMBA"/>
                 <item value="OBOE"/>
                 <item value="ORGAN"/>
-                <item value="PIANO"/>
-                <item value="PICCOLO"/>
-                <item value="SOPRANO SAXOPHONE"/>
                 <item value="STEEL DRUM"/>
-                <item value="SYNTH BASS"/>
                 <item value="TENOR SAXOPHONE"/>
-                <item value="TIMPANI"/>
                 <item value="TROMBONE"/>
                 <item value="TRUMPET"/>
-                <item value="TUBA"/>
                 <item value="VIOLA"/>
                 <item value="VIOLIN"/>
                 <item value="XYLOPHONE"/>
               </model>
-              <toolTipText value="Click here to open instrument popup menu."/>
+              <toolTipText value="Click to select top chord instrument."/>
             </properties>
           </component>
           <component id="94ac1" class="javax.swing.JComboBox" binding="comboBox2">
@@ -239,40 +197,25 @@
               <background color="-65536"/>
               <foreground color="-16777216"/>
               <model>
-                <item value="SELECT CHORD INSTRUMENT 2"/>
-                <item value="ACOUSTIC BASS"/>
-                <item value="ALTO SAXOPHONE"/>
-                <item value="BANJO"/>
-                <item value="BARI SAXOPHONE"/>
+                <item value="PIANO"/>
                 <item value="BASSOON"/>
-                <item value="BELLS"/>
                 <item value="CELLO"/>
-                <item value="CLARINET"/>
-                <item value="ELECTRIC BASS"/>
                 <item value="ELECTRIC GUITAR"/>
                 <item value="ELECTRIC PIANO"/>
-                <item value="FLUTE"/>
                 <item value="FRENCH HORN"/>
                 <item value="GUITAR"/>
                 <item value="HARP"/>
                 <item value="MARIMBA"/>
-                <item value="OBOE"/>
                 <item value="ORGAN"/>
-                <item value="PIANO"/>
-                <item value="PICCOLO"/>
-                <item value="SOPRANO SAXOPHONE"/>
                 <item value="STEEL DRUM"/>
-                <item value="SYNTH BASS"/>
                 <item value="TENOR SAXOPHONE"/>
                 <item value="TIMPANI"/>
                 <item value="TROMBONE"/>
-                <item value="TRUMPET"/>
                 <item value="TUBA"/>
                 <item value="VIOLA"/>
-                <item value="VIOLIN"/>
                 <item value="XYLOPHONE"/>
               </model>
-              <toolTipText value="Click here to open instrument popup menu."/>
+              <toolTipText value="Click to open middle chord instrument."/>
             </properties>
           </component>
         </children>
@@ -284,6 +227,7 @@
         </constraints>
         <properties>
           <background color="-10230529"/>
+          <toolTipText value=""/>
         </properties>
         <border type="none" title="Click the button below when you are ready to select a file to HARMONIZE!" title-justification="2" title-position="3">
           <font name="Bahnschrift" size="14"/>
@@ -312,6 +256,7 @@
             <properties>
               <background color="-10230529"/>
               <font name="Bahnschrift" size="14"/>
+              <toolTipText value=""/>
             </properties>
             <border type="none" title="Click the button below if you would like to make a major song MINOR!" title-justification="2" title-position="3">
               <font name="Bahnschrift" size="14"/>
@@ -370,6 +315,8 @@
                 <item value="to the right as one of your customized instruments,"/>
                 <item value="the voice following it (if there is one) will"/>
                 <item value="become that instrument as well."/>
+                <item value=""/>
+                <item value="NOTE: &quot;Make Minor&quot; is unrelated to instrument choices."/>
               </model>
               <selectionBackground color="-16734289"/>
               <selectionForeground color="-16777216"/>
