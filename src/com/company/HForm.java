@@ -91,6 +91,9 @@ public class HForm {
         comboBoxNeighbors.put(comboBox3, comboBox3);
     }
 
+
+
+
     public HForm() {
 
         voice0 = 0;
@@ -212,7 +215,36 @@ public class HForm {
         comboBox0.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
+                Object instrument0 = comboBox0.getSelectedItem();
+                String stringInstrument0 = (String) instrument0;
+                voice0 = instruments.get(stringInstrument0);
+            }
+        });
 
+        comboBox1.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                Object instrument1 = comboBox1.getSelectedItem();
+                String stringInstrument1 = (String) instrument1;
+                voice1 = instruments.get(stringInstrument1);
+            }
+        });
+
+        comboBox2.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                Object instrument2 = comboBox2.getSelectedItem();
+                String stringInstrument2 = (String) instrument2;
+                voice2 = instruments.get(stringInstrument2);
+            }
+        });
+
+        comboBox3.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                Object instrument3 = comboBox3.getSelectedItem();
+                String stringInstrument3 = (String) instrument3;
+                voice3 = instruments.get(stringInstrument3);
             }
         });
     }

@@ -309,14 +309,9 @@
               <font name="Bahnschrift" size="14"/>
               <foreground color="-16777216"/>
               <model>
-                <item value="NOTE: If you select a genre after selecting"/>
-                <item value="customized instrument choices, your instrument"/>
-                <item value="choices will be lost."/>
-                <item value=""/>
-                <item value="NOTE: If you select any instrument(s) in the column"/>
-                <item value="to the right as one of your customized instruments,"/>
-                <item value="the voice following it (if there is one) will"/>
-                <item value="become that instrument as well."/>
+                <item value="NOTE: If you select any of these instruments -&gt;"/>
+                <item value="for a voice, the following voice (if there is"/>
+                <item value="one) will become the same instrument."/>
                 <item value=""/>
                 <item value="NOTE: &quot;Make Minor&quot; is unrelated to instrument choices."/>
               </model>
