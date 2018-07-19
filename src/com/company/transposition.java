@@ -76,6 +76,7 @@ public class transposition {
                             notes[j] = (seventh + 12 * k) - 1;
                     }
                 }
+
                 Phrase phrase = new Phrase(phrases[i].getStartTime());
                 phrase.addNoteList(notes, rhythm);
                 chords.addPhrase(phrase);

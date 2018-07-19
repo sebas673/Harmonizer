@@ -4,7 +4,6 @@ import jm.util.Read;
 import jm.util.Write;
 import java.util.HashMap;
 import static jm.constants.Pitches.*;
-import static jm.constants.ProgramChanges.*;
 import static jm.music.tools.PhraseAnalysis.pitchToDegree;
 
 public class Harmonizer {

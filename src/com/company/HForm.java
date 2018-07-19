@@ -196,11 +196,6 @@ public class HForm {
             }
         });
 
-
-
-
-
-
         comboBox0.addMouseListener(new myMouseListener());
         comboBox1.addMouseListener(new myMouseListener());
         comboBox2.addMouseListener(new myMouseListener());
@@ -284,9 +279,6 @@ public class HForm {
             lastClickedCBox = (JComboBox) e.getSource();
         }
     }
-
-
-
 
          public static void main (String[]args){
             JFrame frame = new JFrame("HForm");
