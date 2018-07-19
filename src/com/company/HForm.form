@@ -22,6 +22,7 @@
         </constraints>
         <properties>
           <background color="-4211968"/>
+          <toolTipText value="These aren't really &quot;genres,&quot; just random instrument groupings..."/>
         </properties>
         <border type="none" title="Select an instrumentation." title-justification="2" title-position="3">
           <font name="Bahnschrift" size="20"/>
@@ -93,6 +94,7 @@
         </constraints>
         <properties>
           <background color="-10230529"/>
+          <toolTipText value="If you encounter bugs in this area, please don't tell Matt and Ross..."/>
         </properties>
         <border type="none" title="Or customize instrument choices yourself." title-justification="2" title-position="3">
           <font name="Bahnschrift" size="20"/>
@@ -227,7 +229,7 @@
         </constraints>
         <properties>
           <background color="-10230529"/>
-          <toolTipText value=""/>
+          <toolTipText value="LADIES LUNCH 4EVER!!"/>
         </properties>
         <border type="none" title="Click the button below when you are ready to select a file to HARMONIZE!" title-justification="2" title-position="3">
           <font name="Bahnschrift" size="14"/>
@@ -256,7 +258,7 @@
             <properties>
               <background color="-10230529"/>
               <font name="Bahnschrift" size="14"/>
-              <toolTipText value=""/>
+              <toolTipText value="JULIE ROCKS!! &lt;3"/>
             </properties>
             <border type="none" title="Click the button below if you would like to make a major song MINOR!" title-justification="2" title-position="3">
               <font name="Bahnschrift" size="14"/>

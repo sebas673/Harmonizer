@@ -122,6 +122,10 @@ public class HForm {
                 voice1 = VIOLA;
                 voice2 = CELLO;
                 voice3 = DOUBLE_BASS;
+                comboBox0.setSelectedItem("VIOLIN");
+                comboBox1.setSelectedItem("VIOLA");
+                comboBox2.setSelectedItem("CELLO");
+                comboBox3.setSelectedItem("ACOUSTIC BASS");
                 JOptionPane.showMessageDialog(null, "Classical has been selected.");
             }
         });
@@ -132,6 +136,10 @@ public class HForm {
                 voice1 = ALTO_SAXOPHONE;
                 voice2 = TENOR_SAXOPHONE;
                 voice3 = BARITONE_SAXOPHONE;
+                comboBox0.setSelectedItem("SOPRANO SAXOPHONE");
+                comboBox1.setSelectedItem("ALTO SAXOPHONE");
+                comboBox2.setSelectedItem("TENOR SAXOPHONE");
+                comboBox3.setSelectedItem("BARI SAXOPHONE");
                 JOptionPane.showMessageDialog(null, "Sax Quartet has been selected.");
             }
         });
@@ -143,6 +151,10 @@ public class HForm {
                 voice2 = HARP;
                 voice3 = ACOUSTIC_BASS;
 
+                comboBox0.setSelectedItem("FLUTE");
+                comboBox1.setSelectedItem("BELLS");
+                comboBox2.setSelectedItem("HARP");
+                comboBox3.setSelectedItem("ACOUSTIC BASS");
                 JOptionPane.showMessageDialog(null, "Calming has been selected.");
             }
         });
@@ -152,7 +164,11 @@ public class HForm {
                 voice0 = VIOLIN;
                 voice1 = BANJO;
                 voice2 = ACOUSTIC_GUITAR;
-                voice3 = ACCORDION;
+                voice3 = ACOUSTIC_BASS;
+                comboBox0.setSelectedItem("VIOLIN");
+                comboBox1.setSelectedItem("BANJO");
+                comboBox2.setSelectedItem("GUITAR");
+                comboBox3.setSelectedItem("ACOUSTIC BASS");
                 JOptionPane.showMessageDialog(null, "Country has been selected.");
 
             }
